@@ -23,6 +23,10 @@ jobs:
         
       - name: Build
         run: dotnet build ./Products.Api.sln --configuration Release --no-restore
-        
+
+      # M.Jovanovic lies? 
+      #- name: Compose
+      #  run: docker-compose -f docker-compose.yml up
+
       - name: Test
         run: dotnet test ./Products.Api.sln --configuration Release --no-build
